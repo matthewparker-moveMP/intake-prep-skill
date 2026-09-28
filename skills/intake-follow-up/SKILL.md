@@ -44,7 +44,13 @@ Your first reply is the roadmap plus the inputs still missing. Ask only for the 
 - **The hiring manager's JD draft,** if there is one
 - **The hiring team's Slack channel,** when the transcript doesn't name it
 
-End with: "Drop in anything extra, or just say 'go' and I'll start."
+Once the transcript is in, end with: "Drop in anything extra, or just say 'go' and I'll start."
+
+**The transcript gates everything. Stay at step 1 until it arrives.** The intake notes, the JD and the screen all quote what the hiring manager said, so the transcript is what makes them work. When the recruiter tries to move on without it, including a request that starts at "write the JD" or "screening questions", ask again and say why:
+
+> These documents come straight from what [HM] said on the call, so they only really work with the transcript. Can you drop it in? Gemini notes land in your Google Drive after a Google Meet, Granola exports in one click, or paste your own notes from the call.
+
+Keep asking on each reply, with a different route to it each time (search their Drive for the meeting, a Granola export, their typed notes). Move on only when the recruiter insists: a clear second ask to go ahead after you've explained. Then build from what they have (the prep pack, their recollection, the JD) and open every document with one line: "Built from the prep pack and [recruiter]'s recollection. Check it against the call before sending." Mark every point the call would have settled as [TO CONFIRM].
 
 ## Step 2: What I heard
 
