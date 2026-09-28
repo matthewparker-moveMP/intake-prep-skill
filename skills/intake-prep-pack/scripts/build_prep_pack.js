@@ -4,8 +4,8 @@
 //
 // JSON shape:
 // {
-//   "title": "Sourcing Plan: <Company> - <Role Title>",
-//   "subtitle": "<Team or org> · <meeting line>",
+//   "title": "Intake Prep Pack - <Company> - <Role>",
+//   "subtitle": "Move · <meeting line>",
 //   "intro": "One short orientation paragraph.",
 //   "sections": [
 //     { "heading": "1. The meeting", "blocks": [ <block>, ... ] }, ...
@@ -14,57 +14,31 @@
 // Block types:
 //   {"type":"p","text":"..."}                      plain paragraph
 //   {"type":"p","runs":[{"t":"bold","b":true},{"t":" rest"}]}   rich paragraph
+//   A run with "url" becomes a clickable hyperlink: {"t":"Northwind careers page","url":"https://..."}
+//   Runs work in p, bullet, num, q (text/follow/listen stay plain strings) and hyp blocks.
 //   {"type":"bullet","lead":"When:","text":"..."}  bullet with optional bold lead
 //   {"type":"bullet","runs":[...]}                 bullet with rich runs
 //   {"type":"num","lead":"...","text":"...","ref":"anchors"}  numbered item (ref optional)
 //   {"type":"sub","text":"Shape and seniority"}    bold sub-heading
-//   {"type":"q","text":"question","listen":"..."}  bulleted question + italic "Listen for"
-//   {"type":"flag","label":"The #1 flag —","text":"..."}  coloured inline flag paragraph
+//   {"type":"q","text":"question","follow":"...","listen":"..."}  lead question, with an
+//        indented "Follow:" prompt and an italic "Listen for" note (both optional)
+//   {"type":"hyp","text":"I think the business needs X, and this team is being asked to deliver Y."}
+//        shaded hypothesis box for the recruiter to play back on the call
+//   {"type":"flag","label":"The #1 flag:","text":"..."}  coloured inline flag paragraph
 
 const fs = require("fs");
-const { Document, Packer, Paragraph, TextRun, ExternalHyperlink, AlignmentType, LevelFormat,
-        HeadingLevel, BorderStyle } = require("docx");
+const { Document, Packer, Paragraph, TextRun, AlignmentType, LevelFormat,
+        HeadingLevel, BorderStyle, ExternalHyperlink, ShadingType } = require("docx");
 
 const ACCENT = "2E75B6", FLAGC = "B23B2E";
 const [,, inPath, outPath] = process.argv;
 if (!inPath || !outPath) { console.error("Usage: node build_prep_pack.js <content.json> <output.docx>"); process.exit(1); }
 const data = JSON.parse(fs.readFileSync(inPath, "utf8"));
 
-const LINKC = "0563C1";
-const URL_RE = /(https?:\/\/[^\s]+|(?:www\.)?linkedin\.com\/[^\s]+)/gi;
-const TRAIL_RE = /[.,;:!?)\]]+$/;
-
 const t = (text, o) => new TextRun(Object.assign({ text }, o || {}));
-
-function hyper(url, o) {
-  const clean = (url || "").replace(TRAIL_RE, "");
-  const trail = url.slice(clean.length);
-  const href = /^https?:\/\//i.test(clean) ? clean : "https://" + clean;
-  const run = new ExternalHyperlink({ link: href,
-    children: [ new TextRun(Object.assign({ text: clean }, o || {}, { color: LINKC, underline: {} })) ] });
-  return trail ? [run, t(trail, o)] : [run];
-}
-
-// Split plain text into text + ExternalHyperlink runs, auto-linkifying URLs and bare linkedin.com links.
-function linkify(text, o) {
-  if (!text) return [t(text || "", o)];
-  const out = []; let last = 0, m; URL_RE.lastIndex = 0;
-  while ((m = URL_RE.exec(text))) {
-    if (m.index > last) out.push(t(text.slice(last, m.index), o));
-    out.push(...hyper(m[0], o));
-    last = m.index + m[0].length;
-  }
-  if (last < text.length) out.push(t(text.slice(last), o));
-  return out.length ? out : [t(text, o)];
-}
-
-// Rich runs: an explicit {link} wraps the run in a hyperlink; otherwise the run text is auto-linkified.
-const runsFrom = (arr) => arr.flatMap(r => {
-  const o = { bold: !!r.b, italics: !!r.i, color: r.c };
-  if (r.link) return [ new ExternalHyperlink({ link: r.link,
-    children: [ new TextRun(Object.assign({ text: r.t }, o, { color: LINKC, underline: {} })) ] }) ];
-  return linkify(r.t, o);
-});
+const runsFrom = (arr) => arr.map(r => r.url
+  ? new ExternalHyperlink({ link: r.url, children: [t(r.t, { bold: !!r.b, italics: !!r.i, color: "0563C1", underline: {} })] })
+  : t(r.t, { bold: !!r.b, italics: !!r.i, color: r.c }));
 
 function blockToPara(b) {
   switch (b.type) {
@@ -72,30 +46,41 @@ function blockToPara(b) {
       return new Paragraph({ spacing: { before: 90, after: 30 }, children: [t(b.text, { bold: true })] });
     case "flag":
       return new Paragraph({ spacing: { after: 80 }, children: [
-        t(b.label + " ", { bold: true, color: FLAGC }), ...linkify(b.text) ] });
+        t(b.label + " ", { bold: true, color: FLAGC }), t(b.text) ] });
     case "bullet":
       return new Paragraph({ numbering: { reference: "bullets", level: 0 }, spacing: { after: 50 },
-        children: b.runs ? runsFrom(b.runs) : [ ...(b.lead ? [t(b.lead + " ", { bold: true })] : []), ...linkify(b.text || "") ] });
+        children: b.runs ? runsFrom(b.runs) : [ ...(b.lead ? [t(b.lead + " ", { bold: true })] : []), t(b.text || "") ] });
     case "num":
       return new Paragraph({ numbering: { reference: b.ref || "numbers", level: 0 }, spacing: { after: 55 },
-        children: b.runs ? runsFrom(b.runs) : [ ...(b.lead ? [t(b.lead + " ", { bold: true })] : []), ...linkify(b.text || "") ] });
-    case "q":
-      return new Paragraph({ numbering: { reference: "bullets", level: 0 }, spacing: { after: 60 }, children: [
-        ...linkify(b.text), ...(b.listen ? linkify("  Listen for: " + b.listen, { italics: true, color: "555555" }) : []) ] });
+        children: b.runs ? runsFrom(b.runs) : [ ...(b.lead ? [t(b.lead + " ", { bold: true })] : []), t(b.text || "") ] });
+    case "q": {
+      const paras = [new Paragraph({ numbering: { reference: "bullets", level: 0 }, spacing: { after: 30 },
+        children: b.runs ? runsFrom(b.runs) : [t(b.text, { bold: true })] })];
+      if (b.follow) paras.push(new Paragraph({ indent: { left: 620 }, spacing: { after: 30 }, children: [
+        t("Follow: ", { bold: true, color: ACCENT }), t(b.follow) ] }));
+      if (b.listen) paras.push(new Paragraph({ indent: { left: 620 }, spacing: { after: 70 }, children: [
+        t("Listen for: " + b.listen, { italics: true, color: "555555" }) ] }));
+      return paras;
+    }
+    case "hyp":
+      return new Paragraph({ spacing: { before: 60, after: 100 }, indent: { left: 120, right: 120 },
+        shading: { type: ShadingType.CLEAR, color: "auto", fill: "EEF4FA" },
+        border: { left: { style: BorderStyle.SINGLE, size: 18, color: ACCENT, space: 6 } },
+        children: [t("Hypothesis to play back: ", { bold: true }), ...(b.runs ? runsFrom(b.runs) : [t(b.text || "", { italics: true })])] });
     case "p":
     default:
-      return new Paragraph({ spacing: { after: 80 }, children: b.runs ? runsFrom(b.runs) : linkify(b.text || "") });
+      return new Paragraph({ spacing: { after: 80 }, children: b.runs ? runsFrom(b.runs) : [t(b.text || "")] });
   }
 }
 
 const children = [
-  new Paragraph({ heading: HeadingLevel.HEADING_1, children: [t(data.title || "Sourcing Plan")] }),
+  new Paragraph({ heading: HeadingLevel.HEADING_1, children: [t(data.title || "Intake Prep Pack")] }),
 ];
 if (data.subtitle) children.push(new Paragraph({ spacing: { after: 40 }, children: [t(data.subtitle, { italics: true, color: "666666" })] }));
 if (data.intro) children.push(new Paragraph({ spacing: { after: 120 }, children: [t(data.intro, { color: "444444" })] }));
 for (const s of (data.sections || [])) {
   children.push(new Paragraph({ heading: HeadingLevel.HEADING_2, children: [t(s.heading)] }));
-  for (const b of (s.blocks || [])) children.push(blockToPara(b));
+  for (const b of (s.blocks || [])) children.push(...[].concat(blockToPara(b)));
 }
 
 const doc = new Document({

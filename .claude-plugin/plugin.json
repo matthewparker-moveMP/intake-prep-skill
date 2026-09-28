@@ -1,0 +1,16 @@
+{
+  "name": "move-intake",
+  "version": "0.5.1",
+  "description": "Move's intake skills for embedded recruiters: prepare for and run the intake as an upside-down triangle (business, team, role), then turn the transcript into intake notes for the hiring manager, a JD in the client's style, a recruiter screen and a next-steps checklist.",
+  "author": {
+    "name": "Matt Parker"
+  },
+  "keywords": [
+    "recruiting",
+    "intake",
+    "kickoff",
+    "sourcing",
+    "job description",
+    "screening"
+  ]
+}

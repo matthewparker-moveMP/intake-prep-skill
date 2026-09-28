@@ -1,111 +1,123 @@
-# intake-prep
+# Move Intake
 
-A Claude skill that runs a complete intake cycle for a hiring kickoff: prep the call, run it to a structure, and log the outcome as a record sourcing can actually launch from.
+Move's intake skills for embedded recruiters. Two skills: one to prepare for an
+intake call and run it, and one for everything after it.
 
-One good intake sets up the whole search. One vague intake costs three weeks of misaligned sourcing, a hiring manager who rejects the first eight profiles on an axis nobody wrote down, and a rewrite of the brief. This skill exists to make the first outcome the default.
+Every intake follows the upside-down triangle: start with the business, narrow
+to the team, finish with the role. The pack gives you a broad view of the
+company and the team, then a short set of sharp role questions.
 
-Built for in-house talent teams. It assumes you own the requisition, sit with the hiring manager, and have to live with whatever the intake failed to pin down.
+## What you get
 
-## What it does
+`/move-intake:intake-prep-pack` covers before and during the call.
+`/move-intake:intake-follow-up` covers everything after it.
 
-Three moments. Each runs on its own — you can prep today and log next week.
+The prep pack works as a guide, in five steps it shows you up front: setup, the business
+and the team (it checks its read with you before moving on), the role, your prep
+pack with a walkthrough of how to run the call, and finally calibration profiles
+from LinkedIn. The pack arrives first so you can start reading while the
+LinkedIn search, the longest step, runs.
 
-**PREP** — before the call
-- Deep research on the company and team, run as its own pass where depth warrants
-- 6 to 8 **real, sourced calibration profiles** with live links: close fits, edge cases that each test a specific open question, and one deliberate wrong-shape
-- Persona hypotheses framed as react-to-this prompts, plus a nominated persona interviewee
-- A question bank per pillar, broad to narrow, with must-hit questions tagged so compression under time pressure is obvious
-- Output: a formatted `.docx` prep pack, or markdown on request
+**Before the call.** It starts by getting you set up: what you'll get, the few
+details it needs (client, role, the JD if you have one, meeting time), a check of
+what's connected, and help getting a browser signed in to LinkedIn. Then it
+researches the client, starting with what you can reach inside the client (their
+knowledge base, shared drive, Slack, ATS, careers page) and anything you drop
+into the chat, then deep research on the company to fill the gaps. It maps who's
+in the team today, reads the client's hiring bar, and finds 3 to 4 real
+calibration profiles. You get a Word prep pack (the business, the team, the role,
+then the close with a draft candidate pitch) and a second file with the profiles. A role title and a client name are
+enough to start.
 
-**RUN** — during the call
-- Open and frame, then four pillars: role brief, candidate profile (the bulk of it), live calibration against the starter set, persona-lite. Then logistics and sign-offs
-- Each stage carries a "must leave with" list, and a documented 30-minute compression order for when the call gets cut
+**On the call.** Business and team first, then the role brief, the ideal
+candidate and the calibration profiles, then the close: pay and how to talk about
+it with candidates, location and process, the pitch read back to the hiring
+manager, and next steps with dates. Timings and shorter-call rules are built in.
 
-**LOG** — after the call
-- Intake notes: decisions locked by pillar, answers in the hiring manager's own words, open questions with named owners and dates
-- A gap check scored against the coverage checklist, reported plainly ("role brief and calibration are solid; persona is thin")
-- A persona-interview recommendation, made conditional on evidence rather than by default
+**After the call** (`intake-follow-up`). Share the transcript and say "log the
+[client] intake". It checks what you have connected for the client's own
+templates (intake form, JD template, screening or scorecard templates), reads the
+call back to you in six lines to check, then builds three Word documents:
 
-## The idea behind it
+- **Intake notes** for the hiring manager, in Move's intake notes format (the
+  question on the left, what you heard on the right, open questions collected at
+  the end with owners and dates), plus a Slack post of next steps for the hiring
+  team's channel
+- **A draft JD** in the client's own house style, read from their live JDs, or an
+  update to the live posting or the hiring manager's draft
+- **Your recruiter screen** for 30-minute first calls: the basics every time,
+  the role's hard requirements, three or four killer questions, the sell and a
+  scorecard
 
-Three design choices do most of the work:
+Then a checklist of next steps in chat, with dates, which it helps you work
+through: posting the notes, sign-offs, the persona interview, your sourcing
+goal of 20 candidates in five working days, diary time for sourcing and the
+Friday update, and interview slots held in the hiring manager's diary.
 
-**Calibration with real people, not archetypes.** A hiring manager reacting to a real profile with a real link tells you more in ninety seconds than twenty minutes of abstract requirements talk. Sketches produce polite agreement; real people produce decisions.
+The persona interview runs on every role, separately from the intake, with a
+strong performer in the team.
 
-**Questions designed backwards from a coverage checklist.** [`references/coverage-checklist.md`](references/coverage-checklist.md) defines what a complete intake captures. The question set exists to fill it, and the post-call gap check scores against the same list. Same standard at both ends.
+## How to start it
 
-**Every fact cited, every inference labelled.** Hypotheses are marked as things to test on the call. A named gap beats a confident guess, and an invented candidate name is treated as a failure rather than a rounding error.
+- "prep pack for [role] at [company]", or paste a JD or a role title with a meeting time
+- "I've got an intake meeting Thursday with [client]"
+- "find calibration profiles for [role]"
+- "log the [client] intake", "I've done the intake" or "here's the transcript"
+- "write the JD from the intake" or "screening questions for [role]"
+
+## What to connect
+
+Connect these under your own login. The setup step checks what you have and
+walks you through the rest.
+
+| Tool | Used for |
+| --- | --- |
+| The client's knowledge base, shared drive, Slack and ATS | Company goals, team context, org charts, past specs and hires, and the client's own templates for intake notes, JDs and screens |
+| A browser signed in to LinkedIn: the app's built-in browser (nothing to install) or Claude in Chrome | Team mapping and calibration profiles. You can skip it; the pack then runs without calibration profiles |
+| Gmail and Google Calendar | The client thread, the meeting time and attendees, and booking diary time after the call |
+
+You can also drop files straight into the chat: the JD, org charts, decks, and
+the context pack Move shared with you.
+
+## The Word output
+
+The prep pack builds through `intake-prep-pack/scripts/build_prep_pack.js`, and
+the follow-up documents through `intake-follow-up/scripts/build_docs.js`. Both need
+the `docx` package, which Claude installs on the first run. Ask for markdown instead if you'd rather work in chat.
+
+## Reference files
+
+The skills read these as they go.
+
+`intake-prep-pack`:
+
+- `setup.md`: the start-of-run onboarding, connection steps and handover wording
+- `playbook.md`: the triangle, question bank, call timings, push-back triggers
+- `intake-checklist.md`: what to leave the call with
+- `people-search.md`: team mapping and sourcing mechanics
+- `calibration-sourcing.md`: the calibration method
+
+`intake-follow-up`:
+
+- `hm-summary.md`: the intake notes format and the Slack post
+- `jd.md`: finding the starting point, reading the house style, writing the draft
+- `screen.md`: the recruiter screen template and its quality bar
+- `checklist.md`: the next-steps checklist and how to run it in chat
+- `intake-checklist.md`: the same list the prep pack uses, for the gap check
 
 ## Install
 
-**Claude Code** — clone into your skills directory:
+**Claude apps:** download this repo as a zip, then upload it under **Customize → Plugins**.
+
+**Claude Code:**
 
 ```bash
-git clone https://github.com/matthewparker-moveMP/intake-prep-skill.git ~/.claude/skills/intake-prep
+claude plugin marketplace add matthewparker-moveMP/intake-prep-skill
 ```
-
-**Claude apps** — upload `intake-prep.skill` (a packaged bundle of this repo) as a skill.
-
-For the `.docx` output, install the one dependency:
 
 ```bash
-cd scripts && npm install
+claude plugin install move-intake@move-intake
 ```
-
-Everything else runs with nothing installed and nothing connected.
-
-## Use
-
-Trigger any one moment in plain language:
-
-```
-prep pack for Senior Backend Engineer at Northwind Robotics
-I've got an intake meeting Thursday — here's the JD
-find calibration profiles for this role
-log the Northwind intake        (with a transcript attached)
-```
-
-## Connected tools
-
-The skill works with nothing connected and adapts to what it finds, saying once what a missing tool would have added rather than quietly degrading. Ranked by impact:
-
-| Tool | What it adds |
-|---|---|
-| Browser with a logged-in LinkedIn session | Real calibration profiles and team mapping. The single biggest upgrade |
-| Email and calendar | Meeting length and who's in the room, which sets question priority |
-| Internal docs (Notion, Drive) | Prior briefs, past intakes, known DNC lists |
-| Transcript source | Makes LOG one step; a dropped-in PDF works fine otherwise |
-| People-data tools (Apollo, Clay, ZoomInfo) | Discovery at scale. A supplement, never a requirement |
-
-Ask it to "set up intake-prep" for a walk-through. Full detail in [`references/setup.md`](references/setup.md).
-
-## Layout
-
-| Path | What it holds |
-|---|---|
-| [SKILL.md](SKILL.md) | Entry point: triggers, capability check, the three moments |
-| [references/playbook.md](references/playbook.md) | Call structure, candidate-profile pillars, push-back triggers |
-| [references/coverage-checklist.md](references/coverage-checklist.md) | Definition of a complete intake |
-| [references/calibration-sourcing.md](references/calibration-sourcing.md) | Full calibration sourcing method |
-| [references/people-search.md](references/people-search.md) | People search and verification mechanics |
-| [references/company-research.md](references/company-research.md) | External research method |
-| [references/setup.md](references/setup.md) | What to connect and why |
-| [scripts/build_prep_pack.js](scripts/build_prep_pack.js) | Builds the `.docx` prep pack from a content JSON |
-| [examples/example-content.json](examples/example-content.json) | Worked example covering every block type |
-
-Build the example to see the output shape:
-
-```bash
-cd examples && node ../scripts/build_prep_pack.js example-content.json example.docx
-```
-
-## Sourcing conduct
-
-The calibration and people-search steps read public profiles to build a set for internal discussion. The skill is written to verify every profile before it ships, exclude off-limits companies and do-not-contact lists from the start, and refuse to invent a name or a link. Candidates are not contacted at this stage — an intake produces a hypothesis about who to approach, and the approach is a separate decision you make with the facts in hand.
-
-## Contributing
-
-Issues and pull requests are welcome, particularly on the reference docs: the coverage checklist and the calibration method are opinionated, and better opinions are worth having. Changes to a reference doc should say which call outcome they improve.
 
 ## License
 
