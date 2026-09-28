@@ -107,17 +107,15 @@ The skills read these as they go.
 
 ## Install
 
-**Claude apps:** download this repo as a zip, then upload it under **Customize → Plugins**.
+**Claude app:** go to **Customize → Plugins**, click **Add → Add marketplace**, paste `matthewparker-moveMP/intake-prep-skill`, then install **move-intake**.
 
-**Claude Code:**
-
-```bash
-claude plugin marketplace add matthewparker-moveMP/intake-prep-skill
-```
+**Claude Code:** paste this repo's link into a session and ask Claude to install it, or run:
 
 ```bash
-claude plugin install move-intake@move-intake
+claude plugin install move-intake --marketplace matthewparker-moveMP/intake-prep-skill
 ```
+
+**For a whole team:** an admin adds the marketplace once, then sets the plugin to **Installed by default** under **Organization settings → Plugins & skills**, so everyone has it from their next session.
 
 ## License
 
