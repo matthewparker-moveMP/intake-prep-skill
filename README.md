@@ -107,9 +107,10 @@ The skills read these as they go.
 
 ## Install
 
-**Claude app:** go to **Customize → Plugins**, click **Add → Add marketplace**, paste `matthewparker-moveMP/intake-prep-skill`, then install **move-intake**.
+**On Claude (recommended): the live plugin.** Add it once and you always have the latest version.
 
-**Claude Code:** paste this repo's link into a session and ask Claude to install it, or run:
+- **Claude app:** go to **Customize → Plugins**, click **Add → Add marketplace**, paste `matthewparker-moveMP/intake-prep-skill`, then install **move-intake**.
+- **Claude Code:** paste this repo's link into a session and ask Claude to install it, or run:
 
 ```bash
 claude plugin marketplace add matthewparker-moveMP/intake-prep-skill
@@ -119,7 +120,23 @@ claude plugin marketplace add matthewparker-moveMP/intake-prep-skill
 claude plugin install move-intake@move-intake
 ```
 
-**For a whole team:** an admin adds the marketplace once, then sets the plugin to **Installed by default** under **Organization settings → Plugins & skills**, so everyone has it from their next session.
+- **For a whole team:** an admin adds the marketplace once, then sets the plugin to **Installed by default** under **Organization settings → Plugins & skills**, so everyone has it from their next session.
+
+**Anywhere else: download the skills.** Two files, one per skill:
+
+- [intake-prep-pack.zip](https://github.com/matthewparker-moveMP/intake-prep-skill/releases/latest/download/intake-prep-pack.zip): prepare for and run the intake
+- [intake-follow-up.zip](https://github.com/matthewparker-moveMP/intake-prep-skill/releases/latest/download/intake-follow-up.zip): everything after the call
+
+Then pick your tool:
+
+| Tool | How to add it |
+| --- | --- |
+| Claude chat (claude.ai) | **Settings → Capabilities → Skills**, upload each zip. Turn on code execution so it can build the Word documents. |
+| ChatGPT | Create a custom GPT, add the unzipped files as knowledge, and paste `SKILL.md` into its instructions |
+| Gemini | Create a Gem and add the unzipped `.md` files |
+| Any other chat tool | Start a project or chat, add the unzipped files, and say "follow the instructions in SKILL.md" |
+
+Adding the files to a project, GPT or Gem keeps the skill ready in every new chat there. The method, the questions and every document work in any of these tools. The Word files need a tool that can run code; everywhere else you get the same documents in markdown. Calibration profiles need a browser signed in to LinkedIn; the prep pack carries one spoken calibration question in their place.
 
 ## License
 
