@@ -138,6 +138,19 @@ Then pick your tool:
 
 Adding the files to a project, GPT or Gem keeps the skill ready in every new chat there. The method, the questions and every document work in any of these tools. The Word files need a tool that can run code; everywhere else you get the same documents in markdown. Calibration profiles need a browser signed in to LinkedIn; the prep pack carries one spoken calibration question in their place.
 
+## Also in this marketplace: Move Reporting
+
+Friday reporting for embedded recruiters, in [plugins/move-reporting](plugins/move-reporting):
+
+- `/move-reporting:friday-hm-update` writes the end of week update for one role, for the hiring manager in that role's hiring channel
+- `/move-reporting:friday-hot-update` rolls the week's hiring manager updates into one update for the client's Head of Talent
+
+Once you've added the marketplace above, install it the same way: pick **move-reporting** in the Claude app, or run:
+
+```bash
+claude plugin install move-reporting@move-intake
+```
+
 ## License
 
 [MIT](LICENSE) © Matthew Parker

@@ -4,13 +4,18 @@
     "name": "Matt Parker"
   },
   "metadata": {
-    "description": "Move's intake skills for recruiters: prep and run the intake, then write it up."
+    "description": "Move's skills for recruiters: prep and run the intake, write it up, and send the Friday updates."
   },
   "plugins": [
     {
       "name": "move-intake",
       "source": "./",
       "description": "Prepare for and run a hiring intake as an upside-down triangle (business, team, role), then turn the transcript into intake notes, a JD, a recruiter screen and a next-steps checklist."
+    },
+    {
+      "name": "move-reporting",
+      "source": "./plugins/move-reporting",
+      "description": "Friday reporting for embedded recruiters: the end of week update for each hiring manager, and the roll-up for the client's Head of Talent."
     }
   ]
 }

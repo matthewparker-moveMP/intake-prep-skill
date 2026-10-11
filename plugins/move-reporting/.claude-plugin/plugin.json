@@ -1,0 +1,9 @@
+{
+  "name": "move-reporting",
+  "version": "0.1.0",
+  "description": "Move's Friday reporting for embedded recruiters: the end of week update for each hiring manager, and the roll-up for the client's Head of Talent.",
+  "author": {
+    "name": "Move"
+  },
+  "keywords": ["recruiting", "reporting", "hiring manager", "head of talent", "weekly update"]
+}
