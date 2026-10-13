@@ -87,7 +87,7 @@ the `docx` package, which Claude installs on the first run. Ask for markdown ins
 
 ## Reference files
 
-The skills read these as they go.
+The skills live in [plugins/move-intake](plugins/move-intake) and read these as they go.
 
 `intake-prep-pack`:
 
