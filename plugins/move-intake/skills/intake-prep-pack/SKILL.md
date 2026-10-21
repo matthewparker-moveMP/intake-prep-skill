@@ -1,11 +1,11 @@
 ---
 name: intake-prep-pack
-description: "Guide a Move recruiter through preparing for and running an intake call with a client hiring manager. Onboards the recruiter first (what they'll get, the details still needed, what's connected, help setting up a browser for LinkedIn), then researches the client and delivers a Word prep pack structured as an upside-down triangle: the business, then the team, then the role. Calibration profiles from LinkedIn follow in a second file while the recruiter reads the pack. Use whenever a recruiter is preparing for an intake, kickoff or discovery call ('prep pack for [role] at [company]', 'I've got an intake meeting', pastes a JD or just a role title), or asks for calibration profiles. For everything after the call (the transcript, intake notes, JD, screen and next steps), use intake-follow-up."
+description: "Guide a Move recruiter through preparing for and running an intake call with a client hiring manager. Onboards the recruiter first (what they'll get, the details still needed, what's connected, help setting up a browser for LinkedIn), then researches the client and delivers a Word prep pack structured as an upside-down triangle: the business, then the team, then the role, then the candidate. Calibration profiles from LinkedIn follow in a second file while the recruiter reads the pack. Use whenever a recruiter is preparing for an intake, kickoff or discovery call ('prep pack for [role] at [company]', 'I've got an intake meeting', pastes a JD or just a role title), or asks for calibration profiles. For everything after the call (the transcript, intake notes, JD, screen and next steps), use intake-follow-up."
 ---
 
 # Intake Prep Pack
 
-Every Move intake follows the upside-down triangle. Start with the business, narrow to the team, finish with the role. A recruiter who understands what the company is trying to achieve this year, and what this team must deliver toward it, can sell the role as part of the company's plan and find people who fit the real problem.
+Every Move intake follows the upside-down triangle. Start with the business, narrow to the team, then the role, and finish with the candidate. A recruiter who understands what the company is trying to achieve this year, and what this team must deliver toward it, can sell the role as part of the company's plan and find people who fit the real problem.
 
 The people using this skill are Move's embedded recruiters, and many are new to working with Claude. Act as their guide: speak plainly, tell them which step they're on and why it matters, and explain any Move term the first time it appears.
 
@@ -18,7 +18,7 @@ The skill has two parts: PREP before the call and RUN on the call. The five numb
 > **Here's how we'll do this:**
 > 1. **Setup** (we're here): what I need and what's connected
 > 2. **The business and the team:** what the company is trying to achieve this year, and what this team has to deliver. I'll check my read with you before moving on.
-> 3. **The role:** what the role really is and the questions that matter
+> 3. **The role and the candidate:** what the role really is, and a first draft of the candidate you're looking for, to test with the hiring manager
 > 4. **Your prep pack:** a Word document, plus a walkthrough of how to run the call. You can start reading it straight away.
 > 5. **Calibration profiles:** real LinkedIn profiles to show the hiring manager, in a second file. This is the longest step, so it runs while you read the pack.
 
@@ -66,11 +66,12 @@ Link every fact with a date. Mark every inference as a guess to check on the cal
 
 **The checkpoint.** Share your read in four to six lines: the key facts, the two guesses the recruiter will check on the call ("I think the business needs X this year", "and this team is being asked to deliver Y"), and any sources to add later. Ask: "Does this match what you know about [client]? Add or correct anything, or say 'looks good' and I'll move on to the role." This is where the recruiter's own knowledge of the client matters most. Once research starts, it is the only pause, apart from a LinkedIn sign-in check if one appears.
 
-## Step 3: The role
+## Step 3: The role and the candidate
 
 - **The role, decoded:** what it really is beneath the title, and the two or three places the JD and reality may disagree.
 - **The two decisions the search hangs on** (see `references/playbook.md`).
 - **Who's in the team today and the client's hiring bar,** from the client's own systems and public sources: where the people doing similar work came from, how long they stay, their level. Nominate a strong performer for the persona interview. LinkedIn adds to this in step 5. See `references/people-search.md`.
+- **The candidate, drafted (layer 4):** a first candidate ICP for the hiring manager to correct on the call: the lived experience that makes someone relevant and credible on day one, the two or three attributes that separate great from good, the industry or market expertise that is essential and what can be learned on the job, a split of must-haves and nice-to-haves, and where people like this work today. Build it from the JD, the backgrounds of the people in the team today and the client's hiring bar, and mark every line as a guess to check.
 - **The open questions calibration will test,** written down now so step 5 can source against them.
 
 ## Step 4: Your prep pack, and how to run the call
@@ -80,10 +81,11 @@ Build the pack in this order. Each layer opens with what we know and a short gue
 1. **The meeting:** when, who, how long, the job link, sources used and sources to add later.
 2. **The business:** the facts that matter, the guess, three or four questions.
 3. **The team:** the team today and how it is changing, the guess, three or four questions including why this hire is happening now.
-4. **The role:** the role decoded with at most three flags, the two decisions, questions on the brief and the ideal candidate, the practical details to lock.
-5. **Calibration:** how the profiles will be used on the call and the questions they'll test, with a note that the profiles arrive in a separate file. When the browser was left for later, the spoken question in its place: "Who's someone you'd hire tomorrow, and what makes them right?"
-6. **The close:** a draft candidate pitch built from all three layers, to read back and test with the hiring manager; next steps with dates; booking the persona interview.
-7. **Back pocket:** where this talent sits, pay signals, key people, and the checklist from `references/intake-checklist.md` marked answered or open.
+4. **The role:** the role decoded with at most three flags, the shape-of-role decision, questions on the brief, the practical details to lock.
+5. **The candidate:** the draft candidate ICP as a guess to check (lived experience, key attributes, industry expertise, must-haves and nice-to-haves, where these people work today), the hard-gate decision, and three or four questions.
+6. **Calibration:** how the profiles will be used on the call and the questions they'll test, with a note that the profiles arrive in a separate file. When the browser was left for later, the spoken question in its place: "Who's someone you'd hire tomorrow, and what makes them right?"
+7. **The close:** a draft candidate pitch built from all four layers, to read back and test with the hiring manager; next steps with dates; booking the persona interview.
+8. **Back pocket:** where this talent sits, pay signals, key people, and the checklist from `references/intake-checklist.md` marked answered or open.
 
 **The question cap:** twelve to fifteen questions across the pack, open-ended, each with one follow-up that shows how to follow the answer, and a short "listen for" note where it helps. Fewer, sharper questions beat coverage; the checklist carries completeness. The pack should read in about ten minutes.
 
@@ -102,7 +104,7 @@ Runs after the pack is delivered, when a browser signed in to LinkedIn is availa
 
 ## RUN (the call)
 
-The call runs the triangle: open and frame, the business and the team (check the guesses, get the hiring manager's version in their words), the role brief, the ideal candidate and the calibration profiles, then the close: pay and how to talk about it with candidates, location and process, the pitch read back, next steps with dates and the persona interview booked. Timings and shorter-call rules are in `references/playbook.md`. The persona interview runs separately on every role.
+The call runs the triangle: open and frame, the business and the team (check the guesses, get the hiring manager's version in their words), the role brief, then the candidate (the draft ICP tested and corrected, then the calibration profiles), then the close: pay and how to talk about it with candidates, location and process, the pitch read back, next steps with dates and the persona interview booked. Timings and shorter-call rules are in `references/playbook.md`. The persona interview runs separately on every role.
 
 ## After the call
 
