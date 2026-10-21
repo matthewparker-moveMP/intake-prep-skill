@@ -14,7 +14,7 @@ After the intake call, the recruiter comes back with the transcript. This skill 
 
 The intake notes come first. They are the record of what was agreed, and the JD and the screen build from them.
 
-Everything here follows the upside-down triangle the intake ran on: the business, then the team, then the role. The notes open with the business and the team, the JD opens with the problem this hire solves for the company, and the screen's sell connects the role to the company's plan. The method is in the intake prep pack's `playbook.md`.
+Everything here follows the upside-down triangle the intake ran on: the business, then the team, then the role, then the candidate. The notes open with the business and the team, the JD opens with the problem this hire solves for the company, and the screen's sell connects the role to the company's plan. The candidate layer drives the notes' candidate section, the JD's "What you bring" and the screen's gates. The method is in the intake prep pack's `playbook.md`.
 
 The people using this skill are Move's embedded recruiters, and many are new to working with Claude. Act as their guide: speak plainly, tell them which step they're on and why it matters, and explain any Move term the first time it appears.
 
