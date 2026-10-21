@@ -4,17 +4,18 @@ Read this before assembling a prep pack and before structuring any intake. It ca
 
 ## The upside-down triangle
 
-Start with the business, narrow to the function, finish with the role. Each layer gives the next its meaning.
+Start with the business, narrow to the function, then the role, and finish with the candidate. Each layer gives the next its meaning.
 
 | Layer | What the recruiter finds out |
 | --- | --- |
 | **1. The business** (widest) | The company's goal this year, what the product solves and for whom, where growth is expected to come from, and the biggest risk to hitting it |
 | **2. The function** | What this team must deliver toward the business goal, what is working, what is holding it back, how it changes over the next 12 months, and why this hire is happening now |
-| **3. The role** (narrowest) | How this hire adds to solving the team's problem, what success looks like, the true must-haves, and who can do it |
+| **3. The role** | How this hire adds to solving the team's problem, what the person owns, who they work with, and what success looks like at 6 and 12 months |
+| **4. The candidate** (narrowest) | The candidate ICP: the lived experience that makes someone relevant and credible on day one, the two or three attributes that separate great from good, the industry or market expertise needed, must-haves against nice-to-haves, and where these people work today |
 
 Starting broad builds context fast, gives the recruiter a pitch built on the company's plan, and earns them a seat as an advisor on the search.
 
-**Worked shape (illustrative figures).** A B2B software company hiring a mid-market Account Executive. Layer 1: revenue must grow 60% this year, mostly from mid-market logistics, where the product cut onboarding time for three reference customers. Layer 2: six AEs must deliver half the new revenue; two hit quota, the rest struggled with long logistics cycles; the Head of Sales wants people who sell to operations leaders. Layer 3: £600k new-business quota, £30k to £80k deals, success at 12 months is quota. Without layers 1 and 2 this is a generic AE search. With them, the search targets AEs who sell to operations leaders in logistics, and the pitch writes itself: "You'd carry the company's biggest bet this year, into a segment where the product already wins."
+**Worked shape (illustrative figures).** A B2B software company hiring a mid-market Account Executive. Layer 1: revenue must grow 60% this year, mostly from mid-market logistics, where the product cut onboarding time for three reference customers. Layer 2: six AEs must deliver half the new revenue; two hit quota, the rest struggled with long logistics cycles; the Head of Sales wants people who sell to operations leaders. Layer 3: £600k new-business quota, £30k to £80k deals, success at 12 months is quota. Layer 4: has closed operations buyers on cycles of three months or more and built pipeline in a new segment; multi-threads across a buying committee; logistics or supply chain expertise is a must-have, a network of operations leaders a nice-to-have; these people work today at mid-market logistics software and supply chain SaaS companies. With the role alone this is a generic AE search. With all four layers, the search targets AEs who sell to operations leaders in logistics, and the pitch writes itself: "You'd carry the company's biggest bet this year, into a segment where the product already wins."
 
 ## Lead questions by layer
 
@@ -34,16 +35,22 @@ Pick three or four per layer for the pack, tailored to the client and pre-loaded
 
 **Layer 3: the role**
 - What will this person own, and what does success look like at 6 and 12 months? *Follow: what does a great first 90 days look like?*
-- Who has done this job well, here or anywhere, and what made them great? *Follow: where did they come from before that?*
+- Who will they work with most, and who do they report to? *Follow: who decides whether they've succeeded?*
+
+**Layer 4: the candidate**
+- What has the right person already done that makes them credible here on day one? *Follow: which part of that shows on a CV, and which would you only hear in conversation?*
+- Which two or three attributes separate a great hire from a good one in this team? *Follow: who in the team shows that today?*
+- What industry or market knowledge do they need from day one, and what could they learn here? *Follow: how quickly would they need to learn it?*
 - Which requirements would you hold even if it meant waiting? *Follow: would you sign the offer without it?* (the offer test)
+- Who has done this job well, here or anywhere, and where do people like that work today? *Follow: any companies to avoid?*
 - Where have past candidates for this or similar roles fallen down? *Follow: at which stage, and on what?*
 - The live calibration walk-through against the starter set (see below).
 
 These are a bank. The recruiter adapts the wording, keeps the total at twelve to fifteen, and follows the answer before moving on.
 
-## The two anchors (inside layer 3)
+## The two anchors (layers 3 and 4)
 
-Name the two decisions the search hangs on and put them in the role section. They usually cluster around:
+Name the two decisions the search hangs on. The shape of the role sits in the role section, the hard gate in the candidate section. They usually cluster around:
 
 - **The shape of the role:** which of two talent pools (for example, hands-on specialist or relationship-owning operator). "Equal parts X and Y" is unicorn framing; ask which they would hire if they could only have one.
 - **The true hard gate:** the single requirement that most widens or narrows the pool, often a domain or a specific skill. Apply the offer test.
@@ -54,18 +61,18 @@ Seniority, geography and comp sit alongside the anchors as hard facts to lock in
 
 | Time | What the recruiter covers |
 | --- | --- |
-| 0 to 3 min | **Open and frame.** The goal is to leave ready to source. Name the structure: business, team, role, then logistics. Confirm the recording. |
+| 0 to 3 min | **Open and frame.** The goal is to leave ready to source. Name the structure: business, team, role, candidate, then logistics. Confirm the recording. |
 | 3 to 15 min | **Layers 1 and 2.** Play back the hypothesis on the business and the function and get the hiring manager's version in their words. Follow the answers. |
 | 15 to 25 min | **Layer 3, the role brief.** The org story (new head or backfill), reporting line and team shape with names, success at 6 and 12 months, the interview process with owners and timeline. |
-| 25 to 40 min | **Layer 3, the ideal profile.** The two anchors, must-haves against preferences with the offer test, the domain question, target companies and the do-not-contact list, where past candidates failed. |
-| 40 to 50 min | **Live calibration.** Walk the 3 to 4 starter profiles on screen: 30-second read, yes, no or maybe, and why, in their words. Name the question each edge case tests as you show it. Capture who else should score profiles. |
+| 25 to 40 min | **Layer 4, the candidate.** Test the draft candidate ICP: the lived experience that makes someone credible, the two or three attributes that separate great from good, the industry expertise needed, must-haves against nice-to-haves with the offer test, the hard-gate anchor, target companies and the do-not-contact list, where past candidates failed. |
+| 40 to 50 min | **Layer 4, live calibration.** Walk the 3 to 4 starter profiles on screen: 30-second read, yes, no or maybe, and why, in their words. Name the question each edge case tests as you show it. Capture who else should score profiles. |
 | 50 to 60 min | **The close.** Pay: the range and what can be said to candidates at first contact. Location, relocation and visa, in words safe to share with candidates. Read back the two or three must-haves you'll screen on first. Company facts cleared for candidates and anything to keep private. **Play back the candidate pitch** and ask whether it lands. Next steps with dates, the persona interview booked with a named high performer, and the calibration deadline. |
 
-**Must leave with:** the business goal this year in one sentence; what the function must deliver and what holds it back; why this hire is happening now; how the role adds to the function's goal; the anchors resolved; pay and how to talk about it with candidates; the must-haves you'll screen on, read back; next steps with dates; the persona interview booked; a pitch the hiring manager agrees with.
+**Must leave with:** the business goal this year in one sentence; what the function must deliver and what holds it back; why this hire is happening now; how the role adds to the function's goal; the candidate ICP agreed (lived experience, key attributes, industry expertise, must-haves and nice-to-haves); the anchors resolved; pay and how to talk about it with candidates; the must-haves you'll screen on, read back; next steps with dates; the persona interview booked; a pitch the hiring manager agrees with.
 
 **Compression rules**
-- **45 minutes:** layers 1 and 2 in 8 minutes, role brief in 7, ideal profile in 12, calibration on the top 3 profiles, close in 10.
-- **30 minutes:** play back the layer 1 and 2 hypothesis and take one correction (5 minutes), the anchors and hard gates, calibration on 2 profiles, comp phrasing, the pitch, next steps. Everything else moves to a follow-up or the persona interview.
+- **45 minutes:** layers 1 and 2 in 8 minutes, role brief in 7, the candidate in 12, calibration on the top 3 profiles, close in 10.
+- **30 minutes:** play back the layer 1 and 2 hypothesis and take one correction (5 minutes), the anchors and the candidate ICP (lived experience, key attributes, industry expertise, must-haves), calibration on 2 profiles, comp phrasing, the pitch, next steps. Everything else moves to a follow-up or the persona interview.
 
 ## The persona interview
 
