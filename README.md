@@ -26,10 +26,10 @@ knowledge base, shared drive, Slack, ATS, careers page) and anything you drop
 into the chat, then deep research on the company to fill the gaps. It maps who's
 in the team today, reads the client's hiring bar, and finds 3 to 4 real
 calibration profiles. You get a Word prep pack (the business, the team, the role,
-then the close with a draft candidate pitch) and a second file with the profiles. A role title and a client name are
+the candidate, then the close with a draft candidate pitch) and a second file with the profiles. A role title and a client name are
 enough to start.
 
-**On the call.** Business and team first, then the role brief, the ideal
+**On the call.** Business and team first, then the role brief, the
 candidate and the calibration profiles, then the close: pay and how to talk about
 it with candidates, location and process, the pitch read back to the hiring
 manager, and next steps with dates. Timings and shorter-call rules are built in.
