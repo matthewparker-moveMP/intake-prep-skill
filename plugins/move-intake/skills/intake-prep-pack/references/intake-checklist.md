@@ -25,7 +25,10 @@ The same file sits in both skills' `references/` folders. Edit both together.
 - The day-to-day in concrete terms, and what sits outside the role
 - The two decisions the search hangs on, resolved
 
-## The ideal candidate
+## The candidate (layer 4)
+- The lived experience that makes someone relevant and credible on day one
+- The two or three attributes that separate a great hire from a good one
+- The industry or market expertise needed from day one, and what can be learned on the job
 - Must-haves against nice-to-haves, each passed through the offer test ("would you sign the offer without it?")
 - The background that looks right on paper and gets turned down, named
 - Target companies worth sourcing from, and any to avoid (including Move clients and the client's own no-go list)
@@ -41,7 +44,7 @@ The same file sits in both skills' `references/` folders. Edit both together.
 - Company facts the client is happy for candidates to hear, and anything to keep private
 
 ## The pitch
-- A candidate pitch built from the business, the team and the role, read back and agreed with the hiring manager
+- A candidate pitch built from the business, the team, the role and the candidate, read back and agreed with the hiring manager
 
 ## Next steps
 - Dates for profile feedback, the persona interview (booked, with a named person) and the start of outreach
