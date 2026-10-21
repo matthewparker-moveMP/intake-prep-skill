@@ -25,9 +25,9 @@ Sub-headings: The business this year · Where the team sits · What the team doe
 Prompts: "What business problem does this hire solve today?" · "What is the complexity of the problem space(s) this hire will handle?" · "What does success look like at 6 and 12 months?" · "What happens if the seat is still open in 3 to 6 months?" · "How does this role move team or company goals?"
 Sub-headings: The problem this hire solves · Complexity of the problem space · Success at 6 and 12 months · Cost of an open seat · Impact on goals
 
-**3. Ideal candidate profile**
-Prompts: "What are the must-have knowledge areas and skills, and the nice-to-haves?" · "Which backgrounds tend to succeed or struggle in this team?" · "What adjacent profiles could we consider?" · "What are the top 3 attributes that set a great hire apart?" · "How did you react to the calibration profiles?"
-Sub-headings: Must-haves · Nice-to-haves · Backgrounds that work, and backgrounds that struggle · Adjacent profiles · Top 3 differentiators · Calibration reactions (one line per profile: yes, no or maybe, and why, in their words)
+**3. The candidate**
+Prompts: "What has the right person already done that makes them credible on day one?" · "What industry or market expertise do they need, and what can they learn on the job?" · "What are the must-have knowledge areas and skills, and the nice-to-haves?" · "Which backgrounds tend to succeed or struggle in this team?" · "What adjacent profiles could we consider?" · "What are the top 3 attributes that set a great hire apart?" · "How did you react to the calibration profiles?"
+Sub-headings: Lived experience · Top 3 differentiators (the key attributes) · Industry expertise · Must-haves · Nice-to-haves · Backgrounds that work, and backgrounds that struggle · Adjacent profiles · Calibration reactions (one line per profile: yes, no or maybe, and why, in their words)
 
 **4. Leadership impact and scope** (people-leader roles only; leave the row out for individual contributors)
 Prompts: "What change is this leader expected to drive?" · "What legacy or gaps are they stepping into?" · "What are the biggest risks in this hire?"
