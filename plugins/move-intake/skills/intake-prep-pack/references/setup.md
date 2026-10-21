@@ -101,11 +101,12 @@ Deliver the pack as soon as it's built, then walk the recruiter through the call
 
 > **Step 4 of 5: Your prep pack.** Here it is. Read it once before the call; it takes about 10 minutes. Here's how to use it on a 60-minute call:
 >
-> 1. **Open (2 to 3 minutes).** Say how you'd like to run it: the business first, then the team, then the role, then the practical details. Ask if it's OK to record.
+> 1. **Open (2 to 3 minutes).** Say how you'd like to run it: the business first, then the team, then the role, then the candidate, then the practical details. Ask if it's OK to record.
 > 2. **The business (about 6 minutes).** Read back my guess about what Northwind needs this year and ask Sam to put it in their own words. Let them talk, and follow up on anything big ("how fast?", "compared with what?").
 > 3. **The team (about 6 minutes).** Check the second guess, then ask why this hire is happening now.
-> 4. **The role (about 35 minutes).** Work through the role questions. Then share your screen and show the calibration profiles one at a time: yes, no or maybe, and why.
-> 5. **The close (about 10 minutes).** Pay and what you can tell candidates about it, location and the interview process. Then read back the pitch at the end of the pack and ask whether it lands. Agree next steps with dates, and book the persona interview.
+> 4. **The role (about 10 minutes).** Work through the role questions: what the person owns, success at 6 and 12 months, the reporting line and the interview process.
+> 5. **The candidate (about 25 minutes).** Read back the draft candidate profile from the pack and ask Sam to correct it: the experience they need, the attributes that set a great hire apart, the industry knowledge, and what's a must-have against a nice-to-have. Then share your screen and show the calibration profiles one at a time: yes, no or maybe, and why.
+> 6. **The close (about 10 minutes).** Pay and what you can tell candidates about it, location and the interview process. Then read back the pitch at the end of the pack and ask whether it lands. Agree next steps with dates, and book the persona interview.
 >
 > After the call, come back with the transcript and say "log the Northwind intake". I'll write up the intake notes for Sam, draft the JD and your screen, and give you a checklist of next steps. If you use Google Meet, turn on note-taking with Gemini and the notes land in your Google Drive. If you use Granola, export the notes and drop them in.
 >
@@ -115,6 +116,6 @@ When the recruiter left the browser for later, replace the last paragraph with: 
 
 ## Delivering the calibration profiles (step 5)
 
-> **Step 5 of 5: Calibration profiles.** Here are 4 profiles to show Sam, with a note on the question each one tests. Keep this file open next to the prep pack for the role part of the call.
+> **Step 5 of 5: Calibration profiles.** Here are 4 profiles to show Sam, with a note on the question each one tests. Keep this file open next to the prep pack for the candidate part of the call.
 >
 > That's everything for this intake. Good luck with the call.
